@@ -8,7 +8,7 @@ const login = () => {
     //on click, redirect to the TikTok login page
     //after login, redirect to the app
     const CLIENT_KEY = 'awd8pbwevaxtfozp'
-    const SERVER_ENDPOINT_REDIRECT = 'http://localhost:3000/auth/oauth/tiktok/callback'
+    const SERVER_ENDPOINT_REDIRECT = 'https://social-app-dc-7fcbe05af828.herokuapp.com/auth/oauth/tiktok/callback'
     const handleLogin = () => {
         //redirect to TikTok login page
         console.log("login with tiktok")
