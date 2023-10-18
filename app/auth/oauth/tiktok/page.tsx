@@ -16,10 +16,10 @@ const login = () => {
         let url = 'https://www.tiktok.com/v2/auth/authorize/';
 
         // the following params need to be in `application/x-www-form-urlencoded` format.
-        url += `?client_key=${process.env.CLIENT_KEY}`;
+        url += '?client_key=awd8pbwevaxtfozp';
         url += '&scope=user.info.basic';
         url += '&response_type=code';
-        url += `&redirect_uri=${process.env.SERVER_ENDPOINT_REDIRECT}`;
+        url += '&redirect_uri=https://social-app-dc-7fcbe05af828.herokuapp.com/auth/oauth/tiktok/callback';
         url += '&state=' + csrfState;
         // redirect to the url mentioned above
         console.log(url);
