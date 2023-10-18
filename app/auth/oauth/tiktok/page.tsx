@@ -1,7 +1,5 @@
 'use client'
 
-import { redirect } from "next/dist/server/api-utils"
-
 const login = () => {
 
     //create a button with the text "Login with TikTok"
@@ -9,6 +7,7 @@ const login = () => {
     //after login, redirect to the app
 
     const handleLogin = () => {
+        console.log("login with tiktok-client_id - Start");
         console.log("login with tiktok-key", process.env.CLIENT_KEY);
         console.log("login with tiktok-SERVER_ENDPOINT_REDIRECT", process.env.SERVER_ENDPOINT_REDIRECT);
         //redirect to TikTok login page
@@ -23,6 +22,8 @@ const login = () => {
         url += `&redirect_uri=${process.env.SERVER_ENDPOINT_REDIRECT}`;
         url += '&state=' + csrfState;
         // redirect to the url mentioned above
+        console.log(url);
+        console.log("login with tiktok-client_id - Start");
 
         window.location.href = url;
 
